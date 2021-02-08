@@ -20,3 +20,5 @@ in the wild.
 
     The one variable form for arrays doesn't need to copy it because the array
     can't be changed from the variable.
+
+- Profiling `go tool pprof -alloc_space yourtestbinary.test yourmemprofile`
