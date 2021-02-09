@@ -34,3 +34,5 @@ in the wild.
 
 - Good resource for code reviews: [Go's std
     guidelines](https://github.com/golang/go/wiki/CodeReviewComments)
+
+- Inspect assembly from go code: https://go.godbolt.org/
