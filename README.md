@@ -20,5 +20,11 @@ in the wild.
 
     The one variable form for arrays doesn't need to copy it because the array
     can't be changed from the variable.
+    (source: gopher's slack, #performance)
 
 - Profiling `go tool pprof -alloc_space yourtestbinary.test yourmemprofile`
+    (source: gopher's slack, #performance)
+
+- If testing feels uncomfortable, you're design is bad. This seems obvious but
+    worhts having in this list (source: [learn go with
+    tests](https://quii.gitbook.io/learn-go-with-tests/)
