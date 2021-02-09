@@ -28,3 +28,9 @@ in the wild.
 - If testing feels uncomfortable, you're design is bad. This seems obvious but
     worhts having in this list (source: [learn go with
     tests](https://quii.gitbook.io/learn-go-with-tests/)
+
+- Good resource for gotchas: [50 shades of
+    Go](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/index.html)
+
+- Good resource for code reviews: [Go's std
+    guidelines](https://github.com/golang/go/wiki/CodeReviewComments)
