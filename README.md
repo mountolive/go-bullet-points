@@ -36,3 +36,6 @@ in the wild.
     guidelines](https://github.com/golang/go/wiki/CodeReviewComments)
 
 - Inspect assembly from go code: https://go.godbolt.org/
+
+- Importing `internal` packages can be circumvented using `replace` directives
+    in go.mod (not recommended thou)
