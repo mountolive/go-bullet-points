@@ -44,3 +44,10 @@ in the wild.
     this is significant maybe in a [tight loop](https://stackoverflow.com/questions/2212973/what-is-a-tight-loop); here's an
     [example](https://github.com/golang/go/commit/e85ffec784b867f016805873eec5dc91eec1c99a)
     as variadic get converted to an slice (source: gopher's slack, #performance)
+
+- _I am looking to execute a code block in a thread safe way but only for the
+    same userID or uniqueID. The code block can be executed asynchronously
+    across userIDs, but requests for the same userID should execute one by one.
+    How do I achieve this in Go?_. Answer:
+    [singleflight](https://pkg.go.dev/golang.org/x/sync/singleflight) (source:
+    gopher's slack, #general)
