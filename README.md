@@ -39,3 +39,8 @@ in the wild.
 
 - Importing `internal` packages can be circumvented using `replace` directives
     in go.mod (not recommended thou)
+
+- Tradeoff: Variadic func arguments get performance hurt by the single variable case;
+    this is significant maybe in a [tight loop](https://stackoverflow.com/questions/2212973/what-is-a-tight-loop); here's an
+    [example](https://github.com/golang/go/commit/e85ffec784b867f016805873eec5dc91eec1c99a)
+    as variadic get converted to an slice (source: gopher's slack, #performance)
