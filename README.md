@@ -58,3 +58,5 @@ in the wild.
     operations in a File), as multiple writes to the same file descriptor are
     atomic... But logger has its own lock (I couldn't follow the complete
     discussion: [this discussion](https://gophers.slack.com/archives/C0VP8EF3R/p1613069941471300)
+
+- Type-safe prometheus metrics: https://github.com/cabify/gotoprom
