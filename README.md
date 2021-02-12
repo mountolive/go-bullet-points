@@ -51,3 +51,10 @@ in the wild.
     How do I achieve this in Go?_. Answer:
     [singleflight](https://pkg.go.dev/golang.org/x/sync/singleflight) (source:
     gopher's slack, #general)
+
+- Some weird splatting return: https://play.golang.org/p/VfwDP0h4W7l
+
+- os.Stdout is threadsafe as long as the OS permitted (# of concurrent
+    operations in a File), as multiple writes to the same file descriptor are
+    atomic... But logger has its own lock (I couldn't follow the complete
+    discussion: [this discussion](https://gophers.slack.com/archives/C0VP8EF3R/p1613069941471300)
