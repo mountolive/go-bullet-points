@@ -60,3 +60,5 @@ in the wild.
     discussion: [this discussion](https://gophers.slack.com/archives/C0VP8EF3R/p1613069941471300)
 
 - Type-safe prometheus metrics: https://github.com/cabify/gotoprom
+
+- Interesting examples of behaviour: https://unexpected-go.com/
