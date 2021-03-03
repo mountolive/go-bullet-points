@@ -62,3 +62,5 @@ in the wild.
 - Type-safe prometheus metrics: https://github.com/cabify/gotoprom
 
 - Interesting examples of behaviour: https://unexpected-go.com/
+
+- https://golang.org/pkg/net/http/httputil/#DumpRequest To debug http requests
