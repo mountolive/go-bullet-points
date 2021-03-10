@@ -64,3 +64,5 @@ in the wild.
 - Interesting examples of behaviour: https://unexpected-go.com/
 
 - https://golang.org/pkg/net/http/httputil/#DumpRequest To debug http requests
+
+- Benchmarking: https://golang.org/pkg/testing/#Benchmark Also, an example: https://gist.github.com/peterbourgon/9721bc4984579e474aac7da8ba387a69
