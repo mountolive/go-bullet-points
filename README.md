@@ -68,3 +68,23 @@ in the wild.
 - Benchmarking: https://golang.org/pkg/testing/#Benchmark Also, an example:
     https://gist.github.com/peterbourgon/9721bc4984579e474aac7da8ba387a69 .
     Also, check: https://egonelbre.com/project/hrtime/
+
+- Stupid slice ranging heads-up:
+
+    ```go
+    // range iteration over slice copies the value (so changing it doesn't change the original one)
+	  x := make([]int, 3)
+
+	  x[0], x[1], x[2] = 1, 2, 3
+
+	  for i, val := range x {
+		  fmt.Println(&x[i], "vs.", &val)
+	  }
+	
+	  // This is pretty much the same for assignation
+	  for i := 0; i < len(x); i++ {
+		  v := x[i]
+		  v = 100
+		  fmt.Println(v, "vs.", x[i])
+	  }
+    ```
