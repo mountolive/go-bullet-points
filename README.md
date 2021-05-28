@@ -88,4 +88,15 @@ in the wild.
 		  fmt.Println(v, "vs.", x[i])
 	  }
     ```
+
+- Related to the previous one. Watch out:
+    ```go
+    // allPkgs is a slice of structs
+	  pkgs := make([]*domain.Package, len(allPkgs))
+	  for i, pkg := range allPkgs {
+      // pkg will always point to the last one
+      // so you'll end up with a slice of pointers all pointing to the last element
+		  pkgs[i] = &pkg
+	  }
+    ```
 - Nice article about `HTTP` heads-up in Go: https://martin.baillie.id/wrote/gotchas-in-the-go-network-packages-defaults/
