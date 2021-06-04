@@ -100,3 +100,13 @@ in the wild.
 	  }
     ```
 - Nice article about `HTTP` heads-up in Go: https://martin.baillie.id/wrote/gotchas-in-the-go-network-packages-defaults/
+
+- Keeping a `struct` in cache as `[]byte`: What's the best way to encoding?
+    - `json` would be flexible to changes in the struct, but `gob` would be
+        faster
+    - You could use `gob` and a version field in it, so that you can keep track
+        of the changes in the `struct`(and revalidate the cache with the new
+        version)
+    - If having it as `[]byte` is not required, then there are alternatives that
+        can save encoding/decoding time using `interface{}`: https://github.com/dgryski/trifles/blob/master/cachetest/clock/clock.go
+    source: [gopher-slack](https://gophers.slack.com/archives/C0VP8EF3R/p1622720579258500) (check thread)
