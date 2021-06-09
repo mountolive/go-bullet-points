@@ -110,3 +110,19 @@ in the wild.
     - If having it as `[]byte` is not required, then there are alternatives that
         can save encoding/decoding time using `interface{}`: https://github.com/dgryski/trifles/blob/master/cachetest/clock/clock.go
     source: [gopher-slack](https://gophers.slack.com/archives/C0VP8EF3R/p1622720579258500) (check thread)
+
+- Interesting comments on bound checking on slices and its effects in performance
+  ```
+  Slices in GO are used almost as hints to be able to optimize things:
+  ```
+  <img src="https://pbs.twimg.com/media/E3X1dkoX0AUXI5S.jpg" width="100%">
+  [source](https://twitter.com/badamczewski01/status/1402305230633570309)
+
+  Bryan C Mills [answer](https://gophers.slack.com/archives/C0VP8EF3R/p1623179623141200):
+  ```
+  For the specific example in the slide: in the Slow version, the a[i] = i
+  assignment needs to iterate up to len(s), then stop and panic with a
+  bounds-check failure. In contrast, the Fast version would panic at the initial
+  var c = a[:s], and after that point the compiler knows that all of the
+  remaining accesses are within bounds.
+  ```
