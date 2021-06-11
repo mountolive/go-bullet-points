@@ -118,11 +118,26 @@ in the wild.
   <img src="https://pbs.twimg.com/media/E3X1dkoX0AUXI5S.jpg" width="100%">
   [source](https://twitter.com/badamczewski01/status/1402305230633570309)
 
-  Bryan C Mills [answer](https://gophers.slack.com/archives/C0VP8EF3R/p1623179623141200):
+  [answer source](https://gophers.slack.com/archives/C0VP8EF3R/p1623179623141200):
   ```
   For the specific example in the slide: in the Slow version, the a[i] = i
   assignment needs to iterate up to len(s), then stop and panic with a
   bounds-check failure. In contrast, the Fast version would panic at the initial
   var c = a[:s], and after that point the compiler knows that all of the
   remaining accesses are within bounds.
+  ```
+
+- On [branch prediction](https://blog.cloudflare.com/branch-predictor/)
+
+  [source in gopher's](https://gophers.slack.com/archives/C0VP8EF3R/p1623426881361000)
+
+  ```
+  They write: “conditional branches never-taken are basically free”.
+  Long, long ago, the Go function prologue was: ‘if !growstack goto start, skipping over stack growth code’.
+  I changed it to ‘if growstack, goto end, where the stack growth code is’.
+  This provided 5-6% performance boost on almost all programs across all architectures.
+  The explanation at the time was “better static branch prediction, because we are predicting forward jump not taken”.
+  Yet everyone said all branch prediction is dynamic.
+  What gives? The article explains that: if growstack is almost never true, making it basically free,
+  whereas if !growstack was always taken, thus not free.
   ```
