@@ -1,4 +1,4 @@
-# (GO) BULLET POINTS
+# (Go) Bullet points
 Some shiny or curious facts about Go (and maybe something else), that I've found
 in the wild.
 
@@ -141,3 +141,5 @@ in the wild.
   What gives? The article explains that: if growstack is almost never true, making it basically free,
   whereas if !growstack was always taken, thus not free.
   ```
+- `-race` detects races if your test cases actually tests your concurrent parts
+    with concurrency [source](https://gophers.slack.com/archives/C0VP8EF3R/p1638822932309500)
