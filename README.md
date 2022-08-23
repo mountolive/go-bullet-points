@@ -143,3 +143,5 @@ in the wild.
   ```
 - `-race` detects races if your test cases actually tests your concurrent parts
     with concurrency [source](https://gophers.slack.com/archives/C0VP8EF3R/p1638822932309500)
+
+- `defer` can be very expensive: [example](https://go-review.googlesource.com/c/go/+/424920)
