@@ -26,8 +26,8 @@ in the wild.
     (source: gopher's slack, #performance)
 
 - If testing feels uncomfortable, your design is bad. This seems obvious but
-    worhts having in this list (source: [learn go with
-    tests](https://quii.gitbook.io/learn-go-with-tests/)
+    worths having in this list (source: [learn go with
+    tests](https://quii.gitbook.io/learn-go-with-tests/))
 
 - Good resource for gotchas: [50 shades of
     Go](http://devs.cloudimmunity.com/gotchas-and-common-mistakes-in-go-golang/index.html)
@@ -54,7 +54,7 @@ in the wild.
 
 - Some weird splatting return: https://play.golang.org/p/VfwDP0h4W7l
 
-- os.Stdout is threadsafe as long as the OS permitted (# of concurrent
+- os.Stdout is threadsafe as long as the OS permits it (# of concurrent
     operations in a File), as multiple writes to the same file descriptor are
     atomic... But logger has its own lock (I couldn't follow the complete
     discussion: [this discussion](https://gophers.slack.com/archives/C0VP8EF3R/p1613069941471300)
